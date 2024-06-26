@@ -1,0 +1,180 @@
+[
+    {
+        "cast": {
+            "castedAtTimestamp": "2024-06-24T12:57:04Z",
+            "embeds": [
+                {
+                    "url": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e37b6a05-721e-4e9b-1838-ee08d3e31900/original"
+                }
+            ],
+            "hash": "0x5a169c29d4f290d6ea32491b151cf325f26c55d8",
+            "fid": "7143",
+            "text": "",
+            "numberOfRecasts": 31,
+            "numberOfLikes": 183,
+            "numberOfReplies": 26,
+            "castedBy": {
+                "fnames": [
+                    "six"
+                ]
+            },
+            "channel": {
+                "channelId": "firstdraft",
+                "name": "First Draft Club"
+            },
+            "socialCapitalValue": {
+                "formattedValue": 14022.125017800796,
+                "rawValue": "1402212501780040"
+            }
+        }
+    },
+    {
+        "cast": {
+            "castedAtTimestamp": "2024-06-24T18:53:47Z",
+            "embeds": [
+                {
+                    "castId": {
+                        "fid": 244917,
+                        "hash": "0x717b6faf943b18039ada2e834394f957200b6065"
+                    }
+                }
+            ],
+            "hash": "0xeb35abf561c42ecc85f394255bda9bdc2ea5a2bb",
+            "fid": "1766",
+            "text": "We've only just started building crucial long-term incentives for core contributors\n\nIMO needs another order of magnitude flowing through this holistic, credibly neutral, member-governed funding mech.\n\n(incredible work to squeeze this viz out of Dune by @cheeky-gorilla \ud83d\udd25)",
+            "numberOfRecasts": 56,
+            "numberOfLikes": 239,
+            "numberOfReplies": 13,
+            "castedBy": {
+                "fnames": [
+                    "trent"
+                ]
+            },
+            "channel": null,
+            "socialCapitalValue": {
+                "formattedValue": 12476.221846756876,
+                "rawValue": "1247622184675651"
+            }
+        }
+    },
+    {
+        "cast": {
+            "castedAtTimestamp": "2024-06-24T14:15:54Z",
+            "embeds": [
+                {
+                    "castId": {
+                        "fid": 5179,
+                        "hash": "0x2221a9b8ea4b9858596975aa0500cda334757ce8"
+                    }
+                }
+            ],
+            "hash": "0xbed72dc9a5457439227daf7e66d7962e073451b7",
+            "fid": "378",
+            "text": "New: gate a Farcaster channel based on subscribing to your Paragraph newsletter.\n\nGrow your newsletter & engage with your subscribers.\n\nEnabled by @neynar and @automod.",
+            "numberOfRecasts": 9,
+            "numberOfLikes": 68,
+            "numberOfReplies": 12,
+            "castedBy": {
+                "fnames": [
+                    "colinarms.eth",
+                    "colin"
+                ]
+            },
+            "channel": {
+                "channelId": "paragraph",
+                "name": "Paragraph"
+            },
+            "socialCapitalValue": {
+                "formattedValue": 10308.89174366457,
+                "rawValue": "1030889174366436"
+            }
+        }
+    },
+    {
+        "cast": {
+            "castedAtTimestamp": "2024-06-24T20:44:25Z",
+            "embeds": [
+                {
+                    "url": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/df7ecc23-601b-4529-5bfa-f032794ffc00/original"
+                }
+            ],
+            "hash": "0x3a4cde3a43099db77a0ce528d5e9a49f1cbfe77a",
+            "fid": "1237",
+            "text": "I'm experimenting with Claude Sonnet 3.5 today. We're making Flappy Bird NFT: Play Flappy Bird with any NFT from your collection. \n\nSo far the biggest hurdles have been getting webpack to work correctly and having the pipes emanate from the top and bottom edge of the screen \u2014 the latter seems to be introduced by the pixel dimensions of the pipe.png asset that it asked me to find online, which it does not properly account for. \n\nAfter a few rounds of chiding we got webpack working ok but wow these pipes don't want to pipe!",
+            "numberOfRecasts": 5,
+            "numberOfLikes": 27,
+            "numberOfReplies": 7,
+            "castedBy": {
+                "fnames": [
+                    "nicholas"
+                ]
+            },
+            "channel": {
+                "channelId": "ai",
+                "name": "AI"
+            },
+            "socialCapitalValue": {
+                "formattedValue": 10280.62865252667,
+                "rawValue": "1028062865252658"
+            }
+        }
+    },
+    {
+        "cast": {
+            "castedAtTimestamp": "2024-06-24T15:29:57Z",
+            "embeds": [
+                {
+                    "url": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/f6859e03-b9b4-4e76-1890-5d538bf6d700/original"
+                }
+            ],
+            "hash": "0xdec0485ba881858b12a3b44c59d3306c9acbd991",
+            "fid": "18085",
+            "text": "something is coming\u2026",
+            "numberOfRecasts": 26,
+            "numberOfLikes": 75,
+            "numberOfReplies": 26,
+            "castedBy": {
+                "fnames": [
+                    "mleejr"
+                ]
+            },
+            "channel": {
+                "channelId": "mfers",
+                "name": "mfers"
+            },
+            "socialCapitalValue": {
+                "formattedValue": 9693.09869754741,
+                "rawValue": "969309869754702"
+            }
+        }
+    },
+    {
+        "cast": {
+            "castedAtTimestamp": "2024-06-24T14:31:18Z",
+            "embeds": [
+                {
+                    "url": "https://x.com/jerallaire/status/1803432989113593890"
+                }
+            ],
+            "hash": "0x4bb586e74543133242b22f1c46d31854cb564114",
+            "fid": "238988",
+            "text": "1/ Deeper Dive into my Long Form Post/Cast on why\n\nI\u2019m more bullish than I have ever been about crypto.\n\nhttps://x.com/jerallaire/status/1803432989113593890\n\n\u201cPublic blockchain infrastructure has evolved into its 3rd generation, providing global scale network computers that can handle large scale applications with trusted data, transactions and compute.\u201d\n\nMy mental model for blockchain networks has always been network operating systems.  This is one of the most important things to help people understand what\u2019s happening with this new infrastructure layer on the internet.\n\nThe way that most \u201cimportant people\u201d (e.g. MSM, policymakers, people running big financial institutions) filter the concept of \u201cblockchain\u201d is typically hyper narrow \u2013 it\u2019s a technology for \u201ccryptocurrency\u201d, which is \u201cmostly bad and useless\u201d, and even as a technology its never been proven to be useful for anything other than constructing online casinos and proliferating scams.",
+            "numberOfRecasts": 18,
+            "numberOfLikes": 119,
+            "numberOfReplies": 11,
+            "castedBy": {
+                "fnames": [
+                    "jerallaire"
+                ]
+            },
+            "channel": {
+                "channelId": "base",
+                "name": "Base"
+            },
+            "socialCapitalValue": {
+                "formattedValue": 9659.01660778995,
+                "rawValue": "965901660778965"
+            }
+        }
+    }
+]

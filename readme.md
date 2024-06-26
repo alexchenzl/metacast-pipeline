@@ -1,0 +1,72 @@
+# Project Deployment Guide
+
+This guide will walk you through the process of setting up and running this project on your local machine.
+
+## Prerequisites
+
+- Python 3.10 or lower
+- pip (Python package installer)
+
+## Installation
+
+1. Clone the repository to your local machine:
+   ```
+   git clone [your-repository-url]
+   ```
+
+2. Navigate to the project directory:
+   ```
+   cd [your-project-name]
+   ```
+
+3. Install the required Python packages:
+   ```
+   pip install openai airstack
+   ```
+
+## Configuration
+
+1. Create a `config.json` file in the root directory of the project.
+
+2. Add the following content to `config.json`, replacing the placeholders with your actual API keys and other configuration details:
+   ```json
+   {
+     "airstack_api_key": "your_airstack_api_key",
+     "openai_api_key": "your_openai_api_key",
+     "api_url": "your_api_endpoint_url",
+     "bearer_token": "your_bearer_token",
+     "valid_keywords": ["keyword1", "keyword2", "keyword3"]
+   }
+   ```
+
+## Running the Scripts
+
+The project consists of several scripts that should be run in sequence. To run all scripts at once, use:
+
+```
+python start.py
+```
+
+This will execute the following scripts in order:
+
+1. `0StepCleanTempData.py`
+2. `1DailyGetDataFormAirstack.py`
+3. `2Transform_data.py`
+4. `3GptCheckRelated.py`
+5. `4CheckKeywordManual.py`
+6. `5submitData.py`
+
+## Output
+
+- The scripts will generate several output files in the project directory.
+- Logs will be stored in the `log` directory.
+- The final output will be submitted to the API specified in your `config.json` file.
+
+## Troubleshooting
+
+- If you encounter any Unicode-related errors, ensure that your terminal supports UTF-8 encoding.
+- Check the log files in the `log` directory for detailed error messages and script outputs.
+
+## Note
+
+Make sure to keep your `config.json` file secure and do not share it publicly, as it contains sensitive API keys.
