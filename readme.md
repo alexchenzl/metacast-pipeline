@@ -11,17 +11,17 @@ This guide will walk you through the process of setting up and running this proj
 
 1. Clone the repository to your local machine:
    ```
-   git clone [your-repository-url]
+   git clone https://github.com/alexchenzl/metacast-pipeline
    ```
 
 2. Navigate to the project directory:
    ```
-   cd [your-project-name]
+   cd metacast-pipeline
    ```
 
 3. Install the required Python packages:
    ```
-   pip install openai airstack
+   pip install openai airstack nest_asyncio
    ```
 
 ## Configuration
