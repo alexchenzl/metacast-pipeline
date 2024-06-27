@@ -59,15 +59,25 @@ This will execute the following scripts in order:
 0StepCleanTempData.py:
 
 Cleans temporary data by moving and renaming .txt files to a backup directory, ensuring a clean workspace for new data processing.
+
 1DailyGetDataFormAirstack.py:
+
 Fetches trending casts data from Airstack API, processes it, and saves the results to 'AllTrendOutput.txt' for further analysis.
+
 2Transform_data.py: 
+
 Transforms the raw data from 'AllTrendOutput.txt', restructuring it into a more usable format and saving it to 'transformed_json.txt'.
+
 3GptCheckRelated.py: 
+
 Uses OpenAI's GPT model to check the relevance of each cast against predefined keywords, saving results to 'GptChecked.txt'.
+
 4CheckKeywordManual.py:
+
 Extracts the most relevant keyword for each cast using GPT, compares it with valid keywords, and saves results to 'ManualChecked.txt'.
+
 5submitData.py: 
+
 Filters and reformats the processed data, then submits it to a specified API endpoint for final processing or storage.
 
 ## Output
