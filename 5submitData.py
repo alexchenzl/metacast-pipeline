@@ -59,7 +59,7 @@ for entry in filtered_data:
         "fid": int(entry["fid"]),
         "text": entry["text"],
         "channel": entry["channel"],
-        "tags": entry.get("tags", ""),
+        "tags": entry["keyword"],
         "likes": entry["likes"],
         "replies": entry["replies"],
         "recasts": entry["recasts"],

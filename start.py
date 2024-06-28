@@ -19,6 +19,7 @@ def run_script(script_name):
             )
             log.write(result.stdout)
             log.write(result.stderr)
+
             print(f"Successfully ran {script_name}")
         except subprocess.CalledProcessError as e:
             log.write(f"Error running {script_name}:\n")

@@ -59,7 +59,7 @@ async def main():
     all_data.extend(query_response.data['TrendingCasts']['TrendingCast'])
     safe_print(query_response.data)  # Using safe_print instead of print
     
-    page_limit = 20 # Set the maximum number of pages to fetch
+    page_limit = int(config['page_limit']) # Set the maximum number of pages to fetch
     current_page = 0  # Initialize page counter
     
     while query_response.has_next_page and current_page < page_limit:

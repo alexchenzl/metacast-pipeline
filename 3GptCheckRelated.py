@@ -3,6 +3,8 @@ import json
 import codecs
 import os
 import sys
+from backoff import on_exception, expo
+from openai.error import RateLimitError
 
 def safe_print(obj):
     try:
@@ -59,7 +61,8 @@ print(f"Number of casts loaded: {len(casts)}")
 for i, cast in enumerate(casts):
     print(f"Processing cast {i+1}/{len(casts)}")
     prompt = f"Does the text: \"{cast['text']}\" contain related information in the keywords: {', '.join(valid_keywords)}?'Yes' means that the text is related to the keywords. 'No' means that the text is not related to the keywords at all."
-    try:
+    @on_exception(expo, RateLimitError, max_tries=5)
+    def process_cast():
         response = openai.ChatCompletion.create(
             model="gpt-4",
             messages=[
@@ -68,6 +71,10 @@ for i, cast in enumerate(casts):
             ],
             max_tokens=50
         )
+        return response
+
+    try:
+        response = process_cast()
         print(response['choices'][0]['message']['content']+"\n--------")
         
         # Determine relevance based on model response

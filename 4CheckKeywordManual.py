@@ -3,6 +3,8 @@ import json
 import codecs
 import os
 import sys
+import backoff
+import time
 
 def safe_print(obj):
     try:
@@ -55,7 +57,7 @@ valid_keywords = config['valid_keywords']
 casts = read_json_from_file('GptChecked.txt')
 print(f"Number of casts loaded: {len(casts)}")
 
-# Function to get the most relevant keyword for a given text
+@backoff.on_exception(backoff.expo, (openai.error.RateLimitError, openai.error.APIError), max_time=60)
 def get_most_relevant_keyword(text):
     response = openai.ChatCompletion.create(
         model="gpt-4",
@@ -68,7 +70,6 @@ def get_most_relevant_keyword(text):
     keyword = response.choices[0].message['content'].strip().strip('"').lower()
     return keyword
 
-# Analyze text, add the most relevant keyword, and filter based on valid keywords
 def analyze_and_filter_casts(casts):
     updated_casts = []
     for i, cast in enumerate(casts):
@@ -83,9 +84,20 @@ def analyze_and_filter_casts(casts):
             else:
                 cast['ManualCheckRelevant'] = "Not"
             updated_casts.append(cast)
-        except Exception as e:
-            print(f"Error processing cast {i+1}: {e}")
+        except backoff.MaxRetryError as e:
+            print(f"Max retries reached for cast {i+1}: {e}")
             cast['ManualCheckRelevant'] = "Error"
+            cast['error'] = str(e)
+            updated_casts.append(cast)
+        except openai.error.APIError as e:
+            print(f"OpenAI API Error for cast {i+1}: {e}")
+            cast['ManualCheckRelevant'] = "Error"
+            cast['error'] = str(e)
+            updated_casts.append(cast)
+        except Exception as e:
+            print(f"Unexpected error processing cast {i+1}: {e}")
+            cast['ManualCheckRelevant'] = "Error"
+            cast['error'] = str(e)
             updated_casts.append(cast)
     return updated_casts
 
