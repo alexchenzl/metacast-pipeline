@@ -21,8 +21,10 @@ This guide will walk you through the process of setting up and running this proj
 
 3. Install the required Python packages:
    ```
-   pip install openai airstack nest_asyncio
+   pip install airstack nest_asyncio
    pip install backoff
+   # use older version to avoid dependency confict with airstack
+   pip instal openai==0.28.0
    ```
 
 ## Configuration
