@@ -39,10 +39,11 @@ def transform_data(original_json):
     new_json = []
     for item in original_json:
         cast = item['cast']
+        print(f"Cast: {cast['hash']}")
         text = cast['text']
         new_item = {
             "hash": cast['hash'],
-            "username": cast['castedBy']['fnames'][0],
+            "username": cast['castedBy']['fnames'][0] if cast['castedBy'] is not None else None,
             "fid": cast['fid'],
             "text": text,
             "channel": cast['channel']['name'] if cast['channel'] else None,
